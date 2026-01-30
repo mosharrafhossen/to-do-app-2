@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px 25px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #374151;
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #3b82f6;
+}
+
+button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.task-list {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.task-item {
+  background: #f3f4f6;
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  gap: 6px;
+  flex-wrap: wrap; /* মোবাইলের জন্য ফ্লেক্স আইটেম ভাঙবে */
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.btn-group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap; /* মোবাইল স্ক্রিনে বাটন লাইন ভাঙবে */
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.complete-btn {
+  background: #10b981;
+}
+
+.complete-btn:hover {
+  background: #059669;
+}
+
+.incomplete-btn {
+  background: #f59e0b;
+}
+
+.incomplete-btn:hover {
+  background: #d97706;
+}
+
+.restart {
+  background: #0ea5e9;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.restart:hover {
+  background: #0284c7;
+}
+
+/* 🌐 মোবাইল রেসপনসিভ অংশ */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .task-list {
+    max-height: 250px;
+  }
+}

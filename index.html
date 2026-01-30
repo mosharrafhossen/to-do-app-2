@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional To-Do List</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Professional To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="নতুন কাজ লিখুন (Maximum 10)">
+  <button onclick="addTask()">➕ কাজ যোগ করুন</button>
+
+  <div class="task-list" id="taskList"></div>
+  <button class="restart" onclick="restart()">🔄 সব রিসেট করুন</button>
+</div>
+  <script src="JS/custom.js"></script>
+</body>
+</html>
